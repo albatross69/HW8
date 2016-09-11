@@ -11,4 +11,12 @@ $app->get('/', function (\Slim\Http\Request $request, \Slim\Http\Response $respo
     require 'views/main.php';
 });
 
+$app->get('/product_info', function (\Slim\Http\Request $request, \Slim\Http\Response $response, $args) use ($pdo){
+    $statement = $pdo->select()->from('products');
+    $res = $statement->execute();
+    $data = $res->fetchAll();
+
+    return $response->withJson($data);
+});
+
 $app->run();
