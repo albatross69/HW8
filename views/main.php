@@ -57,10 +57,10 @@
     <title>Document</title>
 </head>
 <body>
-<!--На эту кнопку жмшь и через аякс появляется список товаров-->
+
 <div class="accordion">
-    <h3>Question One Sample Text</h3>
-    <table class="table table-hover">
+    <h3>Инфо о товарах(клацать сюда)</h3>
+    <table border="1" class="table table-hover">
         <thead id="start">
         <th>prdouct_id</th>
         <th>product_name</th>
@@ -74,6 +74,20 @@
         </tbody>
     </table>
 </div>
+
+<hr>
+
+<h2>Задание№2</h2>
+<div>
+    <form action="/vk_img" method="post" enctype="multipart/form-data">
+        <p><label for="id">id<br/>
+                <input type="text" name="user_id"></label></p>
+        <p><label for=""><input type="file" name="picture"></label></p>
+        <input type="submit">
+    </form>
+</div>
+
+
 <script type='text/javascript' src='views/jquery-3.1.0.min.js'></script>
 <script type='text/javascript' src='views/main.js'></script>
 </body>
